@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Events</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans&family=Outfit:wght@300&display=swap" rel="stylesheet">
+    <style>
+        body{
+            background-color: rgb(88, 88, 88);
+            font-family: 'Outfit', sans-serif;
+            color:rgb(214, 196, 162);
+            font-size: x-large;
+            
+        }
+        .main-div{
+            display: flex;
+            justify-content: center;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+        #result{
+            color: violet;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-div">
+        <div>
+            <label for="">Your Name :</label>
+            <input type="text" name="" placeholder="Enter Your name"  style="font-size: 18pt; height: 30px; width:200px;" id="ice">
+            <br>
+            <label for="">Choose an flavor that you love to have :
+            <select name="iceCreams" id="iceCreams" style="font-size: 18pt; height: 30px; width: 200px;">
+                <option value="">Select One</option>
+                <option value="chocolate">Chocolate</option>
+                <option value="vanilla">Vanilla</option>
+                <option value="orange">Orange</option>
+                <option value="drak choclate">Drak Chocolate</option>
+            </select>
+        </label>
+        <br>
+        <div id="result"></div>
+        </div>
+    </div>
+    <script>
+        // const selectElement = ()=>{
+        //     const inputChanges = document.getElementById('ice').value;
+        //     const iceCreams = document.getElementById('iceCreams').value;
+        //     const result = document.getElementById('result');
+
+        //     result.innerHTML=`Mr ${inputChanges} Selects ${iceCreams} ice cream flavour`;
+        // }
+
+        // Also be done in the other way by calling its id refrence
+        const iceCreams = document.getElementById('iceCreams');
+        iceCreams.addEventListener('change',()=>{
+            const inputChanges = document.getElementById('ice').value;
+            const iceCreams = document.getElementById('iceCreams').value;
+            const result = document.getElementById('result');
+
+            result.innerHTML=`Mr ${inputChanges} Selects ${iceCreams} ice cream flavour`;
+        });
+    </script>
+</body>
+</html>

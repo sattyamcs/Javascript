@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timer / clear interval</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans&family=Outfit:wght@300&display=swap" rel="stylesheet">
+    <style>
+         body{
+            background-color: rgb(46, 2, 46);
+            color: wheat;
+            font-size: large;
+            font-family: 'Outfit', sans-serif;
+            text-shadow: grey;
+        }
+        .main-div{
+            width: 100vw;
+            height: 100vh;
+            display: grid;
+            place-items: center;
+        }
+        p{
+            font-size: xxx-large;
+            text-align: center;
+            color: yellow;
+        }
+        #btn,#btn1{
+           color: white;
+           background:rgb(4, 155, 214);
+           border-radius: 8px;
+           padding: 10px;
+           cursor: pointer;
+           width: 45%;
+           text-align: center;
+           font-size: x-large;
+       }
+    </style>
+</head>
+<body>
+    <div class="main-div">
+        <div>
+           <p>You can start and stop the timer!</p>
+           <button id="btn">Start</button>
+           <button id="btn1">Stops</button>
+        </div>
+    </div>
+    <script>
+        const stopNum=document.querySelector('p');
+        const btn = document.getElementById('btn');
+        const stopinterval = document.getElementById('btn1');
+
+        let timeRef;
+        let num = 0;
+
+        //calling function for start button 
+        const showMyname=()=>{
+            stopNum.innerHTML="Loading... Please Wait"
+            timeRef=setInterval(()=>{
+                stopNum.innerHTML=`${num}`
+                num++;
+            },1000);
+        }
+
+        btn.addEventListener('click',showMyname);
+
+        stopinterval.addEventListener('click',()=>{
+            clearInterval(timeRef);
+        })
+    </script>
+</body>
+</html>
