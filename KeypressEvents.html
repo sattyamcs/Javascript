@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Key Press events in js</title>
+    <style>
+        body{
+            background: rgb(78, 1, 40);
+        }
+        h1{
+            color: lightgoldenrodyellow;
+        }
+        .main-div{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .effect-1{
+            position: relative;
+            bottom: 50%;
+            left: 10%;
+            width: 500px;
+            height: 150px;
+            background-color: lightgoldenrodyellow;
+            border-radius: 8px;
+        }
+        #keys{
+            color: lightgoldenrodyellow;
+            font-size: larger;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="main-div">
+        <div>
+            <h1>Functions are triggered when user press any key</h1>
+            <br>
+            <input type="text" class="effect-1" onkeypress="keyPress()" onkeydown="keyDown()" onkeyup="keyUp()" >
+            <br>
+            <p id="keys"></p>
+        </div>
+    </div>
+    <script>
+        //On keypress means when you start typing in the box
+        const keyPress = ()=>{
+            document.getElementById('keys').innerHTML=`You Pressed ${event.key} and its code is ${event.code}`
+        }
+        //When keys are pressed 
+        const keyDown = ()=>{
+            document.getElementById('keys').innerHTML="Keys Are Pressed"
+        }
+        //When keys goes up
+        const keyUp=()=>{
+            document.getElementById('keys').innerHTML="Keys Are Up"
+        }
+    </script>
+</body>
+</html>

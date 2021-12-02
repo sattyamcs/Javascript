@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Searching the DOM element practise</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300&display=swap" rel="stylesheet">
+    <style>
+        body{
+            background: #2a364f;
+            display: grid;
+            place-items: center;
+            font-family: 'Outfit', sans-serif;
+        }
+        .btn{
+            display: inline-block;
+            background-color: rgb(7, 85, 202);
+            color: white;
+            font-size: 16px;
+            font-weight: normal;
+            width: 132px;
+            text-align: center;
+            border-radius: 3px;
+            transition: 300ms;
+            text-decoration: none;
+            padding: 10px 22px;
+            z-index: 100000;
+            outline: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        p{
+            text-align: center;
+            color: wheat;
+        }
+        h1{
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <p class="para">My name is Sattyam Chauhan</p>
+    <p id="para">I am a Software Developer</p>
+    <h1 id="heading">I love my Profession</h1>
+    <button class="btn" onclick="changeContent()">Click Me</button>
+    <script>
+        // we can change by creating this to the functiom
+        const changeContent = () =>{
+            // we can directly write
+            document.getElementById('heading').innerHTML="An Engineer can do anythiing"
+            document.getElementById('para').innerHTML="An Engineer can do anythiing"
+
+            // by taking the reference , heading is the object here
+            // const headingChange = document.getElementById('heading');
+            // headingChange.innerHTML = "We are happy to serve Coding"
+
+            // This will shows to the console
+            console.log(document.getElementsByClassName('para').innerHTML="Hi ENgineers");
+            console.log(document.getElementsByTagName('p').innerHTML="Hi Everyone");
+
+
+            // Now same we have with the QuerySelectors// this is given with the . and #
+            document.querySelector('.para').innerHTML="Hi Lovely peoples"
+            console.log(document.querySelectorAll('.para')); // this returns only the number of elements presents here
+        }
+    </script>
+
+
+
+<!-- Difference between getElementbyid and query selectors? -->
+
+
+<!-- syntax.  element = document.getElementById(id); -->
+<!-- returns a refrence of an element by its id, if the specific element is not present with the specific id the -->
+<!-- it returns null -->
+
+<!-- QuerySelectors()
+syntax: element= document.querySelectors(selector)
+returns the first element with the document that matches with the selector, or null if no matches -->
+
+
+</body>
+</html>
