@@ -2,32 +2,32 @@
 // storing variables and functions together in a conatiner is object , Example; a schoool bag;
 
 // 1st Way to create an object 
-// let bioData = {
-//     myName: "Sattyam", // these all are literals 
-//     myAge:24,
-//     mySchool: "Army Public School",
-//     //now functions be defined like this in a object
-//     myResidence:function(){
-//         console.log("New Fauji Colony , Farrukhabad")
-//     }
-// }
-//Now here we are going to call our object literals 
-// console.log(bioData.myName);
-// bioData.myResidence();
+let bioData = {
+    myName: "Sattyam", // these all are literals 
+    myAge:24,
+    mySchool: "Army Public School",
+    //now functions be defined like this in a object
+    myResidence:function(){
+        console.log("New Fauji Colony , Farrukhabad")
+    }
+}
+// Now here we are going to call our object literals 
+console.log(bioData.myName);
+bioData.myResidence();
 
 
 
 // 2nd way to write object where no need to write function as per the ES6;
-// let bioData = {
-//     myName: "Sattyam", // these all are literals 
-//     myAge:24,
-//     mySchool: "Army Public School",
-//     //now functions be defined like this in a object
-//     myResidence(){
-//         console.log(`My name is ${bioData.myName} and i completed schooling from ${bioData.mySchool}`)
-//     }
-// }
-// bioData.myResidence();
+let bioData = {
+    myName: "Sattyam", // these all are literals 
+    myAge:24,
+    mySchool: "Army Public School",
+    //now functions be defined like this in a object
+    myResidence(){
+        console.log(`My name is ${bioData.myName} and i completed schooling from ${bioData.mySchool}`)
+    }
+}
+bioData.myResidence();
 
 
 
