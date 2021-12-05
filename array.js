@@ -137,3 +137,15 @@ const sum = array1.reduce((Accumulator,curElement,index,array1)=>{
 },7);
 // 7 is saved in accumulator as a intial value 
 console.log(sum);
+
+
+
+// Flat method in array that is defining in 2019.
+const arr = [
+    ["zone1","zone2"],
+    ["zone3","zone4"["zone5","zone6"]]
+];
+console.log(arr);
+console.log(arr.flat()); //gives your array as a list of elements
+console.log(arr.flat(2));
+console.log(arr.flat(Infinity));//for infinity array under arrays 
