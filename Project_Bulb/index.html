@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bulb switch On and Off</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main-heading">
+        <h1>You can turn the lights on with Switches</h1>
+        <button onclick="on()">Light On</button>
+        <img src="images/bulb-off.png" alt="Lightsoff" id="myImage" >
+        <button onclick="off()">Light Off</button>
+    </div>
+    <script>
+       const light=document.getElementById('myImage'); 
+    //    const lightOff=document.querySelector('.off')
+        const on=()=>{
+           light.src="images/bulb-on.png";
+        //    console.log("on")
+            };
+
+        const off=()=>{
+            light.src="images/bulb-off.png";
+            // console.log("off")
+        };
+    </script>
+</body>
+</html>

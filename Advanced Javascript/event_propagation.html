@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Propagation and event bubbling</title>
+    <style>
+        body{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            background-color: bisque;
+        }
+        .main-div{
+            width: 300px;
+            height: 300px;
+            padding: 10px;
+            border:red solid 8px;
+            position: absolute;
+            top: 30%;
+            right: 40%;
+            background-color: cyan;
+            border-radius: 4px;
+        }
+        .inner-div{
+            height: 200px;
+            width: 200px;
+            border: 8px solid black;
+            position: relative;
+            left: 17%;
+            top: 17%;
+            background-color: darkolivegreen;
+            border-radius: 4px; 
+        }
+    </style>
+</head>
+<body>
+    <div class="main-div">
+        <div class="inner-div"></div>
+    </div>
+    <script>
+
+        //Propagation refers to how event travel through the DOM tree. The Dom tree contain parent child and siblings relation in each other 
+        //Bubbling and capturing are two phases of propagation , bubbling travels from target to root and capturing travels from root to target
+        let mainDiv = document.querySelector('.main-div');
+        let innerDiv = document.querySelector('.inner-div');
+
+        const mainClick=()=>{
+            alert("parent box clicked")
+        }
+
+        const innerClick=()=>{
+            alert("child box clicked")
+           // event.stopPropagation(); //if we dont give this the the bubbling part get asusual form bottom to the top where the the event sitauated
+        }
+        //when we fired the second child event it will first show child then it will call parent this is because of event bubbling to stop this we need to put event.stopPropagation();
+
+        mainDiv.addEventListener('click',mainClick,true);
+        innerDiv.addEventListener('click',innerClick,);
+
+        //In event listener the third argument defines that what phase do you want bubbling or capturing phase. it is given by true and false . and it is false by default 
+        // Event bubbling phase== gives first the child then returns to the parent
+        //Event capture phase== first the parent ont then returns the to child
+    </script>
+</body>
+</html>

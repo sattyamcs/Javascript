@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajax with the fetch API </title>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans&family=Outfit:wght@300&display=swap" rel="stylesheet">
+    <style>
+        body{
+            background-color: rgb(24, 23, 78);
+            font-family: 'Outfit', sans-serif;
+        }
+         .container{
+            display: grid;
+            place-items: center;
+            text-align: center;
+            color: rgb(231, 192, 82);
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            border: 6px solid white;
+            padding: 50px;
+            border-radius: 4px;
+            box-shadow:5px 5px 10px 2px white;
+            /* background-color: rgb(104, 116, 116); */
+        }
+        #btn {
+                background-color: #1266e4; /* Green */
+                border: none;
+                color: white;
+                padding: 15px 32px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                cursor: pointer;
+                border-radius: 6px;
+                }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 id="phr">Corona report of India </h1>
+        <button id="btn">Click Here</button>
+    </div>
+    <script>
+        //Here we are going to fetch data from Api
+
+        fetch('https://api.covid19api.com/summary').then((apiData) => {
+            console.log(apiData);//.then is a promise and parameter passed to it having all the data of that API.
+            return apiData.json(); //Here we converts data into JSON object formats as the data returns in javascript objects format
+        }).then((actualData) => {
+            console.log(actualData);     //Here we console the data that actual data we got.
+            const myData = actualData.Countries[76];
+
+            const btnData = () => { document.getElementById('phr').innerHTML = `${myData.Country} having the new confirmed cases ${myData.NewConfirmed} and new deaths occured ${myData.NewDeaths}` };
+
+            document.getElementById('btn').addEventListener('click', btnData);
+
+        }).catch((error) => {
+            console.log(error); //catch is to catch the error.
+        });
+    </script>
+</body>
+
+</html>
