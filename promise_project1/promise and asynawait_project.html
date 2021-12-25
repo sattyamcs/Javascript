@@ -6,39 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Promises and Asyn await project on jokes Api</title>
     <link href="https://fonts.googleapis.com/css2?family=Fira+Sans&family=Outfit:wght@300&display=swap" rel="stylesheet">
-    <style>
-        body{
-            background-color: rgb(24, 23, 78);
-            font-family: 'Outfit', sans-serif;
-        }
-         .container{
-            display: grid;
-            place-items: center;
-            text-align: center;
-            color: rgb(231, 192, 82);
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
-            border: 6px solid whitesmoke;
-            padding: 50px;
-            border-radius: 4px;
-            box-shadow:5px 5px 10px 2px white;
-            /* background-color: rgb(104, 116, 116); */
-        }
-        #btn {
-                background-color: #1266e4; /* Green */
-                border: none;
-                color: white;
-                padding: 15px 32px;
-                text-align: center;
-                text-decoration: none;
-                display: inline-block;
-                font-size: 16px;
-                cursor: pointer;
-                border-radius: 6px;
-                }
-    </style>
+   <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
@@ -53,15 +21,15 @@
             return apiData.json(); //Here we converts data into JSON object formats as the data returns in javascript objects format
         }).then((actualData) => {
             console.log(actualData);     //Here we console the data that actual data we got.
-            const myData = actualData[07].text;
+            // const myData = actualData[10].text;
+            const myData = actualData.forEach(function(actualData,index){
+                console.log(actualData.text);
+            })
 
-//             for (const myData in actualData) {
-//   console.log(`${myData}: ${actualData[08].text}`);
-// }
+            // const myReal = JSON.stringify(myData);
+            // const myReal = myData;
 
-            const myReal = JSON.stringify(myData);
-
-            const btnData = () => { document.getElementById('phrase').innerHTML = myReal;}
+            const btnData = () => { document.getElementById('phrase').innerHTML = myData}
 
             document.getElementById('btn').addEventListener('click', btnData);
 

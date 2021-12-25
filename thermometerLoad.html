@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thermometer Loading Project</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans&family=Outfit:wght@300&display=swap" rel="stylesheet">
+    <style>
+         body{
+            background-color: rgb(24, 23, 78);
+            font-family: 'Fira Sans', sans-serif;
+        }
+         .container{
+            display: grid;
+            place-items: center;
+            text-align: center;
+            color: rgb(231, 192, 82);
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            border: 6px solid white;
+            padding: 50px;
+            border-radius: 4px;
+            box-shadow:5px 5px 10px 2px white;
+            background-color: rgb(69, 67, 202);
+            font-size: x-large;
+        }
+    </style>
+</head>
+<body>
+        <div class="container">
+            <h1>Thermometer Loading...<span id="thermo"></span></h1>
+        </div>
+        <script>
+            // As the html code for temperature is not available thats why i used the different images
+
+            // Here we use the time interval with diffrent times to change the image 
+            const tempLoad=()=>{
+                let temp = document.getElementById('thermo');
+                temp.innerHTML="&#127776";
+
+                setTimeout(()=>{
+                    temp.innerHTML="&#127775";
+                    temp.style.color="cyan"
+                    temp.style.fontSize="100px"
+                },1000);
+
+                setTimeout(()=>{
+                    temp.innerHTML="&#127774";
+                    temp.style.color="pink"
+                },2000);
+
+                setTimeout(()=>{
+                    temp.innerHTML="&#127773";
+                    temp.style.color="black"
+                },3000);
+            }
+            tempLoad();
+
+
+            // set interval is used to repeat the image once they got stopped after lasttimeout there we use timeinterval to repeat.
+
+            setInterval(tempLoad,4000);
+        </script>
+</body>
+</html>

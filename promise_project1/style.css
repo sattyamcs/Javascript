@@ -16,8 +16,9 @@ body{
     border-radius: 4px;
     box-shadow:5px 5px 10px 2px white;
     background-color: rgb(71, 69, 175);
+    /* background-color: rgb(104, 116, 116); */
 }
-.btn {
+#btn {
         background-color: #1266e4; /* Green */
         border: none;
         color: white;
@@ -28,5 +29,4 @@ body{
         font-size: 16px;
         cursor: pointer;
         border-radius: 6px;
-        border: 2px solid white;
         }

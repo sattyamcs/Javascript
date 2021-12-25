@@ -6,13 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bulb switch On and Off</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans&family=Outfit:wght@300&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="main-heading">
-        <h1>You can turn the lights on with Switches</h1>
-        <button onclick="on()">Light On</button>
+    <div class="container">
+        <h1>You can turn the light on with Switches!</h1>
         <img src="images/bulb-off.png" alt="Lightsoff" id="myImage" >
-        <button onclick="off()">Light Off</button>
+        <button onclick="on()" class="btn">Light On</button><br>
+        <button onclick="off()" class="btn">Light Off</button>
     </div>
     <script>
        const light=document.getElementById('myImage'); 
