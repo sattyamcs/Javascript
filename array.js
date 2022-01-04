@@ -68,9 +68,15 @@ console.log(myNumbers.shift());
 // 3.update march to March(update)
 // 4.delete june from an array
 const months = ['Jan','march','April','June','July'];
-// Array.splice(innex number/start number,delet Count , number);-- this is used as slice to delete update and insert a number
 
-// const newMonths = months.splice(3,1,);
+
+var arraySlicing=months.slice(1,4)//used to take the values from start to end month.slice(start index, end index)
+console.log(arraySlicing);
+
+
+// Array.splice(innex number/start number,delet Count , what to add new);-- this is used as slice to delete update and insert a number
+
+// const newMonths = months.splice(3,1,"hey");
 // console.log(months);
 // console.log(newMonths);
 // As per the output index number 3 is deleted and replaced with hey
@@ -103,7 +109,7 @@ const newArray = array.map((curElm,index,array) => {
 });
 console.log(newArray);
 
-// ques2. Find the square root odf the array;
+// ques2. Find the square root df the array;
 let arr = [64,49,4,9,81];
 
 const newArr = arr.map((curElm)=>{
@@ -111,7 +117,7 @@ const newArr = arr.map((curElm)=>{
 })
 console.log(newArr);
 
-// ques2.multiply each element by 2 and return only those element which are greater than 10
+// ques2.multiply each element by 2 and return only those element which are greater than 10 and then return the sum of returned array?
 let arry = [2,3,4,6,8];
 // Here we are using array chaining that after return an array we can do filter method with the same array.
 // used chaining--map-filter-reduce method at the same problem

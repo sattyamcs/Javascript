@@ -1,4 +1,5 @@
 const calculateTemp = () => {
+    event.preventDefault();//prevents in blinking of result
     const numTemp = document.getElementById('temp').value;
     // console.log(numTemp);
 
@@ -9,11 +10,11 @@ const calculateTemp = () => {
     //    console.log(value);
 
     const celToFah = (cel) => {
-        let fah = ((cel * 9 / 5) + 32);
+        let fah = Math.round((cel * 9 / 5) + 32);
         return fah;
     }
     const fahToCel = (fah) => {
-        let cel = ((fah - 32) * 5 / 9);
+        let cel = Math.round((fah - 32) * 5 / 9);
         return cel;
     }
 
@@ -26,7 +27,4 @@ const calculateTemp = () => {
         result = fahToCel(numTemp)
         document.getElementById('resultContainer').innerHTML = `=${result}Fahrenheit`
     };
-
-
-
 }
