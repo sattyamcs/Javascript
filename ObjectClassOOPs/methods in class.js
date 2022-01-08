@@ -30,9 +30,10 @@ class student{
         console.log("Here we defining static method")
     }
 }
+ 
 let a = new student("Engineer",25);// Here we passed argument
 let b = new student();
 a.name="Sattyam" // Here we defining the value of the method we called after creating object
-a.Hello();  //Here we called our method
+a.Hello();  //Here we called prototype method, it always called with its name
 
 student.staticMethod();// static method is used to call like this (className.staticName) without creating any object
