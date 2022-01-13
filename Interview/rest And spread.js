@@ -15,3 +15,18 @@ let names=["Sattyam","Shivam","Sundaram"];
 let moreName=[...names,"Rahul","Kallu"];   //This is spread operator
 console.log(names);
 console.log(moreName);
+
+
+//Spread for objects
+let values={
+    name:"Sattyam",
+    sName:"Chauhan",
+    prof:"Engineer"
+}
+let newValues={
+    ...values,
+    name:"Shivam"
+}
+
+console.log(values);
+console.log(newValues)
