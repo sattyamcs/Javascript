@@ -15,7 +15,7 @@ class employee{
 
 class manager extends employee{
     
-    info(){
+    infoMan(){
         let ta=300;
         let pa=200;
         let totalSalary= this.empSalary+ ta +pa;
@@ -28,4 +28,4 @@ class manager extends employee{
 let a = new employee("Anshu Dubey",25,2000);
 let b = new manager("Sattyam",25,40000);
 a.info();
-b.info();
+b.infoMan();

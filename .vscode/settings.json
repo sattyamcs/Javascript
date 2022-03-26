@@ -1,3 +1,4 @@
 {
-    "emmet.showSuggestionsAsSnippets": true
+    "emmet.showSuggestionsAsSnippets": true,
+    "liveServer.settings.port": 5501
 }

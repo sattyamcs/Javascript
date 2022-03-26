@@ -1,5 +1,6 @@
 // ARRAY DESTRUCTURING
 
+// Destructuring means that extracting of data from Array, objects and map.
 
 // const mybioData = ["Sattyam","Chauhan",25];
 // Now for accesing the array we were calling with different index numbers

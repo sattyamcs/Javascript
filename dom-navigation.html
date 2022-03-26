@@ -39,10 +39,16 @@
 
     <script>
         // HEre wecall the element by DOM and changes with javascript
+        //By element
         const first = document.body.firstElementChild.firstElementChild
         first.style.color = "Yellow";
+        //By Selectors
         const second = document.querySelector('.second-child');
         second.style.color = "black";
+        // second.innerHTML="bababbab"
+        second.addEventListener('click',()=>{
+            alert("Hello everyone this is a alert")
+        })
     </script>
 </body>
 </html>

@@ -1,4 +1,4 @@
-// Hoisting is a mechanism where variable and functions declaration is moved to top of therir scope before executing
+// Hoisting is a mechanism where variable and functions declaration is moved to top of their scope before executing
 
 // The default behaviour of moving all the declaration to top before execution is called hoisting
 

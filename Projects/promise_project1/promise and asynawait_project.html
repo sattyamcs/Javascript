@@ -22,7 +22,7 @@
         }).then((actualData) => {
             console.log(actualData);     //Here we console the data that actual data we got.
             // const myData = actualData[10].text;
-            const myData = actualData.forEach(function(actualData,index){
+            const myData = actualData.forEach(function(actualData){
                 console.log(actualData.text);
             })
 
@@ -31,7 +31,7 @@
 
             const btnData = () => { document.getElementById('phrase').innerHTML = myData}
 
-            document.getElementById('btn').addEventListener('click', btnData);
+            document.getElementById('btn').addEventListener('click',btnData);
 
         }).catch((error) => {
             console.log(error); //catch is to catch the error.

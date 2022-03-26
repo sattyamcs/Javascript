@@ -2,6 +2,7 @@
 // It contains only unique values
 // Object constructer
 
+// Set is also used to remove duplicates .
 let myArray=[1,2,3,4,5,6]
 
 let obj=new Set(myArray);

@@ -51,13 +51,13 @@
         //Here we are going to fetch data from Api
 
         fetch('https://api.covid19api.com/summary').then((apiData) => {
-            console.log(apiData);//.then is a promise and parameter passed to it having all the data of that API.
+            // console.log(apiData);//.then is a promise and parameter passed to it having all the data of that API.
             return apiData.json(); //Here we converts data into JSON object formats as the data returns in javascript objects format
         }).then((actualData) => {
-            console.log(actualData);     //Here we console the data that actual data we got.
-            const myData = actualData.Countries[76];
+            console.log(actualData.Countries);     //Here we console the data that actual data we got.
+            const myData = actualData.Countries[77];
 
-            const btnData = () => { document.getElementById('phr').innerHTML = `${myData.Country} having the new confirmed cases ${myData.NewConfirmed} and new deaths occured ${myData.NewDeaths}` };
+            const btnData = () => { document.getElementById('phr').innerHTML = `${myData} having the new confirmed cases ${myData.NewConfirmed} and new deaths occured ${myData.NewDeaths}` };
 
             document.getElementById('btn').addEventListener('click', btnData);
 

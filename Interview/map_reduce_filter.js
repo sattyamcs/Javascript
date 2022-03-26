@@ -21,7 +21,7 @@ console.log(anotherArray);
 
 
 
-// SORTED method in array,, converts to the increasing order
+// SORT method in array,, converts to the increasing order
 const sorted = array.sort();
 console.log(sorted);
 

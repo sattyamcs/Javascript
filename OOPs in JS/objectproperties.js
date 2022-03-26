@@ -19,6 +19,7 @@ console.log(myList);
 
 
 // 3.SPREAD OPERATORS
+// The JavaScript spread operator (...) allows us to quickly copy all or part of an existing array or object into another array or object.
 // these are used to add more data of two array using an operator.
 
 let colors=["pink","white","blue"];
