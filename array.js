@@ -134,7 +134,7 @@ console.log(newArr2);
 // 2.REDUCE METHOD
 // Flatten an array means to convert the 3d and 2d array into a single dimensional array.
 // This method executes to the single output value
-// parameters that is used by the reduce methods are 1.Accumulator,2.current value,3.current index,3.array
+// parameters that is used by the reduce methods are 1.Accumulator,2.index,3.value,4.Array
 
 let array1 = [5,4,3]; //if we having a value in string then we add to intialise like we have 7
 const sum = array1.reduce((Accumulator,curElement,index,array1)=>{
@@ -147,11 +147,11 @@ console.log(sum);
 
 
 // Flat method in array that is defining in 2019.
-const arr = [
+const array5 = [
     ["zone1","zone2"],
     ["zone3","zone4"["zone5","zone6"]]
 ];
-console.log(arr);
-console.log(arr.flat()); //gives your array as a list of elements
-console.log(arr.flat(2));
-console.log(arr.flat(Infinity));//for infinity array under arrays 
+console.log(array5);
+console.log(array5.flat()); //gives your array as a list of elements
+console.log(array5.flat(2));
+console.log(array5.flat(Infinity));//for infinity array under arrays 

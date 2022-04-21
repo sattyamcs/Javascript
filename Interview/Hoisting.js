@@ -22,7 +22,7 @@ var c=6;
      console.log("func2")
  }
 
-//  Here as the global execution context executes the code from top it returns the functon as well but the value of a = undefined becuse the memory located to a is undefined because it is declared with values later, if we removes the declaration of a it gives error.
+//  Here as the global execution context executes the code from top it returns the function as well but the value of a = undefined becuse the memory located to a is undefined because it is declared with values later, if we removes the declaration of a it gives error.
 
 console.log(b)
 var b=3;

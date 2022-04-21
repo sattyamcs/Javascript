@@ -1,5 +1,5 @@
 // Event Bubling , Capturing And Event Propagation
-
+// Propagation refers to how the event travels to the dom tree
 // Event Bubbling >>Propagation moves from child to parent
 
 const div = document.querySelector("div");

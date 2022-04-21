@@ -22,7 +22,7 @@ let getDetails2={
 subName.call(getDetails2,"Delhi","India");// Call the function whrever in object you need to place
 
 // Apply function
-// It will give the arguments in the array formats 
+// Only difference between call and apply is Apply will give the arguments in the array formats 
 subName.apply(getDetails2,["kanpur","UttarPradesh"])
 
 // Bind Function()
